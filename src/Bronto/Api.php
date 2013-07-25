@@ -245,6 +245,7 @@ class Bronto_Api
                     if ($value == true) {
                         $this->_options['trace']      = true;
                         $this->_options['cache_wsdl'] = WSDL_CACHE_NONE;
+                        echo "Debug on".PHP_EOL;
                     }
                     break;
             }

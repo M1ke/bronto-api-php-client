@@ -367,6 +367,10 @@ abstract class Bronto_Api_Object
 
                 // Attempt
                 $client = $this->getApi()->getSoapClient();
+                if ($this->getApi()->getDebug()) {
+                    echo "Making request with method: $method".PHP_EOL;
+                    print_r($data);
+                }
                 $result = $client->$method($data);
             } catch (Exception $e) {
                 $error          = true;
